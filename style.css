@@ -912,6 +912,7 @@ ul { list-style: none; }
   .esp-card { grid-template-columns: 1fr; }
   .esp-card img { height: 220px; }
   .sobre-pillars { grid-template-columns: 1fr; }
+  .card-container{background-color: rgba(0, 0, 0, 0.747)}
 }
 
 @media (max-width: 640px) {
