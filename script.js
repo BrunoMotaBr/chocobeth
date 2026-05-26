@@ -135,40 +135,40 @@ const overlay    = document.getElementById('modalOverlay');
 const modalClose = document.getElementById('modalClose');
 
 const products = {
-  brigadeiro: {
-    name:   'Brigadeiro Gourmet',
-    badge:  'Clássico · Mais Pedido',
-    img:    'https://storage.googleapis.com/runable-templates/cli-uploads%2FHj5H0xeHR7muk4oAt3jaNMfeFfhhA20e%2F9WXJYFzAXKiwm0yP2Usnq%2Ftrufas-artesanais-bombons-premium-photography-chocolate_0.jpg',
-    desc:   'Ganache de chocolate ao leite belga com acabamento em granulado crocante artesanal. Uma releitura premium do clássico brasileiro.',
-    details:'🍫 Chocolate 70% cacau · 🌾 Granulado belga importado · 🥛 Leite condensado artesanal · ✦ Sem conservantes',
+  abacaxi: {
+    name:   'Trufa de Abacaxi',
+    badge:  'Frutas · Intenso',
+    img:    'imgs/abacaxi.png',
+    desc:   'Casquinha de chocolate meio amargo com ganache cremosa de abacaxi. O contraste perfeito entre a intensidade do cacau e o cítrico da fruta.',
+    details:'🍍 Abacaxi fresco · 🍫 Chocolate meio amargo 54% · 🥛 Creme de leite fresco · ✦ Equilíbrio cítrico',
     preco:  'R$ 6,50',
-    wa:     'Ol%C3%A1%2C+gostaria+de+pedir+Brigadeiro+Gourmet!'
+    wa:     'Ol%C3%A1%2C+gostaria+de+pedir+Trufa+de+Abacaxi+Meio+Amargo!'
   },
-  ninho: {
-    name:   'Ninho com Nutella',
+  tradicional: {
+    name:   'Tradicional',
     badge:  'Especial · Favorita das clientes',
-    img:    'https://storage.googleapis.com/runable-templates/cli-uploads%2FHj5H0xeHR7muk4oAt3jaNMfeFfhhA20e%2FHj5H0xeHR7muk4oAt3jaNMfeFfhhA20e%2Fv7LcGN2QC5MpYzuoippuY%2Ftrufas-artesanais-bombons-premium-photography-chocolate_2.jpg',
-    desc:   'Cobertura de chocolate branco com leite Ninho e recheio de Nutella. Uma combinação irresistível de cremosidade e avelã.',
-    details:'🥛 Leite Ninho premium · 🌰 Nutella original · 🍫 Cobertura de chocolate branco belga · ✦ Feita sob encomenda',
-    preco:  'R$ 7,50',
+    img:    'imgs/tradicional.png',
+    desc: 'Casquinha crocante de chocolate meio amargo com recheio cremoso de ganache tradicional. O equilíbrio perfeito entre o sabor intenso do cacau e a cremosidade.',
+    details: '🍫 Chocolate meio amargo 54% · 🥛 Creme de leite fresco · ✦ Ganache artesanal · ✦ Feita sob encomenda',
+    preco:  'R$ 8,00 / R$ 6,00',
     wa:     'Ol%C3%A1%2C+gostaria+de+pedir+Ninho+com+Nutella!'
   },
   maracuja: {
     name:   'Maracujá',
     badge:  'Frutas · Refrescante',
-    img:    'https://storage.googleapis.com/runable-templates/cli-uploads%2FHj5H0xeHR7muk4oAt3jaNMfeFfhhA20e%2FnKYq7YZPN9xIsYIHDdCzj%2Fartisan-chocolate-bonbon-close-up-photography-premium_1.jpg',
-    desc:   'Cobertura de chocolate branco com recheio aveludado de maracujá natural. O equilíbrio perfeito entre o doce e o azedinho.',
-    details:'🍋 Polpa de maracujá natural · 🍫 Chocolate branco belga · 🌿 Sem essências artificiais · ✦ Colheita sazonal',
-    preco:  'R$ 6,50',
+    img:    'imgs/Maracuja.png',
+    desc:   'Cobertura de chocolate meio amargo com recheio aveludado de maracujá natural. O equilíbrio perfeito entre o doce e o azedinho.',
+    details:'🍋 Polpa de maracujá natural · 🍫 Chocolate meio amargo · 🌿 Sem essências artificiais · ✦ Colheita sazonal',
+    preco:  'R$ 8,00 / R$ 6,00',
     wa:     'Ol%C3%A1%2C+gostaria+de+pedir+Trufa+de+Maracuj%C3%A1!'
   },
-  prestigio: {
-    name:   'Prestígio',
+  coco: {
+    name:   'Coco',
     badge:  'Clássico · Novo sabor',
-    img:    'https://storage.googleapis.com/runable-templates/cli-uploads%2FHj5H0xeHR7muk4oAt3jaNMfeFfhhA20e%2FWSm3rJq36SEOryTGQDbf3%2Fartisan-chocolate-bonbon-close-up-photography-premium_7.jpg',
+    img:    'imgs/coco.png',
     desc:   'Cobertura de chocolate amargo 54% cacau com recheio de coco fresco levemente adocicado. Sofisticação em cada mordida.',
     details:'🥥 Coco fresco ralado · 🍫 Chocolate amargo 54% cacau · 🌾 Açúcar demerara · ✦ Receita exclusiva',
-    preco:  'R$ 6,50',
+    preco:  'R$ 8,00 / R$ 6,00',
     wa:     'Ol%C3%A1%2C+gostaria+de+pedir+Trufa+Prest%C3%ADgio!'
   },
   limao: {
@@ -179,15 +179,6 @@ const products = {
     details:'🍋 Limão Siciliano orgânico · 🍫 Chocolate branco belga · 🥛 Creme de leite fresco · ✦ Aroma natural',
     preco:  'R$ 6,50',
     wa:     'Ol%C3%A1%2C+gostaria+de+pedir+Trufa+de+Lim%C3%A3o!'
-  },
-  ferrero: {
-    name:   'Ferrero Especial',
-    badge:  'Premium · Coleção especial',
-    img:    'https://storage.googleapis.com/runable-templates/cli-uploads%2FHj5H0xeHR7muk4oAt3jaNMfeFfhhA20e%2Fv4rYDF2w8R-W3Ac8Ey2Ee%2Fartisan-chocolate-bonbon-close-up-photography-premium_4.jpg',
-    desc:   'Trufa de chocolate ao leite com avelã inteira no centro, coberta de granulado crocante. Inspirada no clássico italiano — porém artesanal.',
-    details:'🌰 Avelã torrada inteira · 🍫 Chocolate ao leite 45% cacau · 🌾 Granulado crocante importado · ✦ Edição especial',
-    preco:  'R$ 8,50',
-    wa:     'Ol%C3%A1%2C+gostaria+de+pedir+Trufa+Ferrero+Especial!'
   }
 };
 

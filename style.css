@@ -211,13 +211,14 @@ ul { list-style: none; }
   position: relative;
   height: 100svh;
   min-height: 640px;
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 .hero-bg {
   position: absolute; inset: 0;
+  z-index: -10;
 }
 .hero-img {
   width: 100%; height: 100%;
@@ -333,7 +334,7 @@ ul { list-style: none; }
   position: absolute;
   top: 0; left: 0;
   width: 78%;
-  height: 88%;
+  height: 50%;
   border-radius: var(--r-xl);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
@@ -955,4 +956,98 @@ ul { list-style: none; }
   letter-spacing: .4em;
   margin-bottom: 1.5rem;
   opacity: .6;
+}
+.card-container {
+  margin: 4rem 0 0 0;
+  text-align: center;
+  max-width: 500px;
+  padding: 20px;
+  color: #e5c185; /* Tom dourado padrão */
+}
+
+/* Títulos */
+.main-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.sub-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 3rem;
+    font-weight: 400;
+    margin: -10px 0 20px 0;
+    color: #fffdec; /* Tom mais claro/branco para destaque */
+    text-transform: lowercase;
+}
+
+/* Divisor Dourado */
+.divider {
+    position: relative;
+    width: 150px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e5c185, transparent);
+    margin: 0 auto 25px auto;
+}
+
+.diamond {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 6px;
+    height: 6px;
+    background-color: #e5c185;
+}
+
+/* Texto de Descrição */
+.description {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+/* Grid de Benefícios */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Círculos dos Ícones */
+.icon-circle {
+    width: 55px;
+    height: 55px;
+    border: 1px solid #e5c185;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.icon-circle svg {
+    width: 28px;
+    height: 28px;
+    color: #e5c185;
+}
+
+/* Textos dos Ícones */
+.feature-text {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    font-weight: 600;
+    text-transform: uppercase;
 }
