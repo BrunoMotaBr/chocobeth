@@ -87,7 +87,7 @@ filterBtns.forEach(btn => {
   });
 });
 
-/* ─── Carrossel ─── */
+/* ─── Carrossel ─── 
 const track     = document.getElementById('carouselTrack');
 const items     = track.querySelectorAll('.carousel-item');
 const btnPrev   = document.getElementById('carouselPrev');
@@ -128,7 +128,7 @@ track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; 
 track.addEventListener('touchend', e => {
   const dx = e.changedTouches[0].clientX - touchStartX;
   if (Math.abs(dx) > 50) { dx < 0 ? goTo(current + 1) : goTo(current - 1); resetAuto(); }
-}, { passive: true });
+}, { passive: true });*/
 
 /* ─── Modal ─── */
 const overlay    = document.getElementById('modalOverlay');
